@@ -11,6 +11,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        App\User::create(['firstname' => 'Admin', 'surname' => 'goswapp', 'email' => 'admin@admin.com','type' => 'admin', 'password' => '123456','boscoins' => '10000','address' => 'calle admin','mobile' => '111111111','assessment' =>'10','task_id' => 1]);
+        App\User::create(['firstname' => 'admin', 'surname' => 'admin', 'email' => 'admin@admin.com','type' => 'admin', 'password' => '12345678','boscoins'=> 1000,'address' => 'admin','mobile' =>'123456789','assessment'=>'0','task_id'=> 1]);
     }
 }

@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->string('mobile');
             $table->integer('assessment');
+            $table->bigInteger('task_id')->unsigned();
+            $table->foreign('task_id')->references('id')->on('tasks');
             $table->rememberToken();
             $table->timestamps();
         });

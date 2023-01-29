@@ -24,8 +24,6 @@ class TaskController extends Controller {
             'date_request'=>'required',
             'date_completian'=>'required',
             'type'=>'required',
-            'user_id'=>'required',
-            'profile_id'=>'required',
         ]);
         if($validator->fails()){
             return response()->json(['error' => $validator->errors()], 401);       
@@ -53,8 +51,6 @@ class TaskController extends Controller {
             'date_request'=>'required',
             'date_completian'=>'required',
             'type'=>'required',
-            'user_id'=>'required',
-            'profile_id'=>'required',
         ]);
 
         if($validator->fails()){
@@ -65,10 +61,7 @@ class TaskController extends Controller {
         $task->description = $input['description'];
         $task->date_request = $input['date_request'];
         $task->date_completian = $input['date_completian'];
-        $task->type = $input['type'];
-        $task->type = $input['user_id'];
-        $task->type = $input['profile_id'];
-
+        $task->type = $input['type'];   
         $task->save();
 
         return response()->json(['Tarea' => $task->toArray()], $this->successStatus);

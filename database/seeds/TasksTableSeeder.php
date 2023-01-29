@@ -11,6 +11,6 @@ class TasksTableSeeder extends Seeder
      */
     public function run()
     {
-        App\Task::create(['num_boscoins' => 10, 'description' => 'Formatear pc', 'date_request' => '2023-01-17','date_completian' => '2023-01-17', 'type' => 'informática']);   
+        App\Task::create(['num_boscoins' => 10, 'description' => 'goswapp', 'date_request' => '2023-01-17','date_completian' => '2023-01-17', 'type' => 'profesional']);
     }
 }
