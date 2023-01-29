@@ -43,8 +43,6 @@ class UserController extends Controller
             'address' => 'required',
             'mobile' => 'required',
             'assessment' => 'required',
-            'task_id' => 'required',
-            
         ]);
         if($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 401);       
@@ -92,7 +90,6 @@ class UserController extends Controller
             'address' => 'required',
             'mobile' => 'required',
             'assessment' => 'required',
-            'task_id' => 'required',
         ]);
 
         if($validator->fails()){
@@ -108,7 +105,6 @@ class UserController extends Controller
         $user->address = $input['address'];
         $user->mobile = $input['mobile'];
         $user->assessment = $input['assessment'];
-        $user->task_id = $input['task_id'];   
         $user['password'] = bcrypt($user['password']);
         $user->save();
 

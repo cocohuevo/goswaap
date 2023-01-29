@@ -13,15 +13,15 @@ class Task extends Model
     public $timestamps=true;
 
     protected $fillable =[
-        'num_boscoins','description','date_request','date_completian','type','deleted',
+        'num_boscoins','description','date_request','date_completian','type','user_id','task_id','deleted',
     ];
 
     public function users()
     {
         return $this->belongsTo(User::class);
     }
-    public function tasks()
+    public function profiles()
     {
-        return $this->hasMany(Task::class);
+        return $this->belongsTo(Profile::class);
     }
 }
